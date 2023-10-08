@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        scroll-behavior: smooth;
+        margin: 0;
+        margin-top: 5px;
+        font-family: arial;
+        background: #161616;
+      }
+
+      header {
+        width: 100%;
+        height: 270px;
+        background: rgb(0, 195, 255);
+        clip-path: polygon(50% 37%, 100% 16%, 100% 0, 0 0, 0 16%);
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        font-size: 1.8em;
+        position: sticky;
+        top: 0px;
+      }
+      li {
+        list-style: none;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.2s ease;
+      }
+      li:hover {
+        color: black;
+      }
+      input {
+        width: 100px;
+        height: 25px;
+        border-radius: 15px;
+        transition: 0.2s ease;
+        border: none;
+      }
+      input:hover {
+        width: 170px;
+        height: 30px;
+      }
+      footer {
+        width: 100%;
+        height: 50px;
+        font-size: 2em;
+        color: white;
+        background: #161616;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      section {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: -140px;
+      }
+      section div {
+        width: 350px;
+        height: 350px;
+        background: rgb(153, 145, 145);
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        color: white;
+        border-radius: 20px;
+      }
+      section div button {
+        width: 250px;
+        height: 50px;
+        border-radius: 20px;
+        background: rgb(0, 195, 255);
+        border: 2px solid rgb(153, 145, 145);
+        cursor: pointer;
+        transition: 0.4s ease;
+        color: white;
+      }
+      section div button:hover {
+        background: rgb(153, 145, 145);
+        border: 2px solid rgb(0, 195, 255);
+        color: rgb(0, 195, 255);
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        transition: 0.2s ease;
+      }
+      a:hover {
+        color: #161616;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="NasaSpaceApps.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <li style="margin-top: 10px">
+        <input style="z-index: 1" />
+        <span
+          style="
+            cursor: none;
+            color: rgb(0, 195, 255);
+            z-index: 2;
+            position: absolute;
+            top: 6%;
+            left: 25%;
+          "
+          >l</span
+        >
+      </li>
+      <li style="color: black">Home</li>
+      <li><a href="userprofile.html">Profile</a></li>
+    </header>
+
+    <section>
+      {% for i in recommendations %}
+      <div>
+        <p>{{i.user.prefix}}. {{i.user.first_name}} {{i.user.last_name}}</p>
+        <p>{{i.topic.title}}</p>
+        <p>{{i.description}}</p>
+        <a href="mailto:{{i.user.mail}}">Send Email</a>
+      </div>
+      {% endfor %}
+    </section>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+body{
+    scroll-behavior: smooth;
+    margin:0;
+    margin-top: 5px;
+    font-family:arial;
+    background:#161616;
+    width:100%;
+}
+
+header{
+    width:100%;
+    height:270px;
+    background:rgb(0, 195, 255);
+    clip-path:polygon(50% 37%, 100% 16% , 100% 0, 0 0, 0 16%);
+    display:flex;
+      justify-content: space-evenly;
+      color:white;
+      font-size:1.8em;
+     position:sticky;
+     top:0px;
+
+}
+li{
+    list-style:none;
+   cursor:pointer;
+   margin-top:15px;
+   transition:.2s ease;
+
+}
+li:hover{
+    color:black;
+}
+input {
+width:100px;
+height:25px;
+    border-radius:15px;
+    transition:.2s ease;
+    border:none;
+}
+input:hover{
+    width:170px;
+    height:30px;
+}
+footer{
+    width: 100%;
+    height:50px;
+    font-size:2em;
+    color:white;
+    background:#161616;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+
+section{
+    width:100%;
+    height: fit-content;
+    display:flex;
+    justify-content: space-around;
+    
+    flex-direction:row;
+    flex-wrap:wrap;
+    margin-top:-100px;
+}
+section div{
+    width:350px;
+    height:350px;
+    background:rgb(153, 145, 145);
+   margin-top: 20px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction:column;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.2em;
+    color:white;
+    border-radius:20px;
+}
+section div button{
+    width:250px;
+    height:50px;
+    border-radius:20px;
+    background:rgb(0, 195, 255);
+    border:2px solid rgb(153, 145, 145);
+    cursor:pointer;
+    transition:.4s ease;
+    color:white;
+
+}
+section div button:hover{
+    background:rgb(153, 145, 145);
+    border:2px solid rgb(0, 195, 255);
+    color:rgb(0, 195, 255);
+
+}
+a{
+    text-decoration:none;
+    color:white;
+    transition: .2s ease;
+}
+a:hover{
+    color:#161616;
+}
+h1{
+    color:white;
+    font-family: arial;
+    font-size:2em;
+    margin-left:50px;
+    margin-right:50px;
+    position:absolute;
+    top:15%;
+    margin-top:10px;
+}
+.profile{
+    width:90%;
+    height:400px;
+    background:rgb(153, 145, 145);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:row;
+    font-size:1.6em;
+    
+}
+.photo{
+    width:170px;
+    height:200px;
+    background:rgb(95, 90, 90);
+    border-radius: 50px;
+    margin-left:40px;
+    margin-top:-30px;
+}
+span p{
+    margin-left:20px;
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <li style="margin-top: 10px;  "> <input style="z-index:1;"> <span style="cursor:none;color:rgb(0, 195, 255);; z-index:2; position:absolute;top:6%; left: 25%;">l</span></li>
+		<li ><a href="{ url '' }">Home</a></li>
+          <li style="color:black;">Profile</li>
+      
+       </header>
+
+       <section> 
+        <div class="profile">
+            <div class="photo"></div>
+            <span>
+					<p>{{user.prefix}}. {{user.first_name}} {{user.first_name}}</p>
+					<p style="font-size:.9em; margin-left:20px;">topic: {{user.topic}}</p>
+       </span> </div>
+
+       <h2 style="font-size:1.7em; color:white; position:relative; margin:15px;">Projects:</h2>
+      
+       <div>
+				<p>Topic: {{user.topic}}</p>
+				<p>{{}}</p>
+        <p> it takes 24 months to be finished</p>
+    </div>
+    <div>
+        <p> mohamed</p>
+        <p>microbiology</p>
+        <p>a gene gun that insert a whole DNA</p>
+        <p> it takes 24 months to be finished</p>
+        <button>view more details</button>
+    </div>
+    <div>
+        <p> mohamed</p>
+        <p>microbiology</p>
+        <p>a gene gun that insert a whole DNA</p>
+        <p> it takes 24 months to be finished</p>
+        <button>view more details</button>
+    </div>
+    <div>
+        <p> mohamed</p>
+        <p>microbiology</p>
+        <p>a gene gun that insert a whole DNA</p>
+        <p> it takes 24 months to be finished</p>
+        <button>view more details</button>
+    </div>
+    <div>
+        <p> mohamed</p>
+        <p>microbiology</p>
+        <p>a gene gun that insert a whole DNA</p>
+        <p> it takes 24 months to be finished</p>
+        <button>view more details</button>
+    </div>
+    <div>
+        <p> mohamed</p>
+        <p>microbiology</p>
+        <p>a gene gun that insert a whole DNA</p>
+        <p> it takes 24 months to be finished</p>
+        <button>view more details</button>
+    </div>
+</section>
+</body>
+</html>
